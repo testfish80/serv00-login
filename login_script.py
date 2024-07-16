@@ -8,8 +8,8 @@ import requests
 import os
 
 # 从环境变量中获取 Telegram Bot Token 和 Chat ID
-TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
-TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
+# TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+# TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
 def format_to_iso(date):
     return date.strftime('%Y-%m-%d %H:%M:%S')
@@ -100,7 +100,7 @@ async def main():
         await delay_time(delay)
         
     message += f'所有{serviceName}账号登录完成！'
-    await send_telegram_message(message)
+    # await send_telegram_message(message)
     print(f'所有{serviceName}账号登录完成！')
 
 async def send_telegram_message(message):
