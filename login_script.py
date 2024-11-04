@@ -88,7 +88,7 @@ async def main():
 
         if is_logged_in:
             now_utc = format_to_iso(datetime.now(timezone.utc))    #   format_to_iso(datetime.utcnow())
-            now_beijing = format_to_iso(datetime.utcnow() + timedelta(hours=8))
+            now_beijing = format_to_iso(datetime.now(timezone.utc) + timedelta(hours=8))
             success_message = f'{serviceName}账号 {username} 于北京时间 {now_beijing}（UTC时间 {now_utc}）登录成功！'
             message += success_message + '\n'
             print(success_message)
